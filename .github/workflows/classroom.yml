@@ -28,7 +28,7 @@ jobs:
       with:
         test-name: test2
         setup-command: ''
-        command: python3 C:\Users\assignment\codes\code_test.py --output_path=C:\Users\assignment\answer\week02\quiz1\output.txt --input_path=C:\Users\assignment\answer\week02\quiz1\input.txt
+        command: python C:\Users\assignment\codes\code_test.py --output_path=C:\Users\assignment\answer\week02\quiz1\output.txt --input_path=C:\Users\assignment\answer\week02\quiz1\input.txt
         timeout: 10
         max-score: 4
     - name: Autograding Reporter
@@ -38,5 +38,6 @@ jobs:
         TEST2_RESULTS: "${{steps.test2.outputs.result}}"
       with:
         runners: test1,test2
+
 
 
